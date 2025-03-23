@@ -4,7 +4,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { 
   Users, Home, FileText, Landmark, Settings, 
-  CreditCard, PiggyBank, BarChart3, Shield
+  CreditCard, PiggyBank, BarChart3, Shield, UserRound
 } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -77,7 +77,8 @@ const Sidebar = ({ className }: SidebarProps) => {
         <NavItem to="/reports" icon={<BarChart3 className="h-5 w-5" />} label="Reports" />
       </div>
       
-      <div className="p-3 mt-auto">
+      <div className="p-3 mt-auto space-y-1">
+        <NavItem to="/profile" icon={<UserRound className="h-5 w-5" />} label="Profile" />
         <NavItem to="/settings" icon={<Settings className="h-5 w-5" />} label="Settings" />
       </div>
     </div>
